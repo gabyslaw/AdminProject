@@ -1,0 +1,100 @@
+﻿@model CyberAcademy.Web.Models.LoginInfo
+@{
+    ViewBag.Title = "Gabytech Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<!-- HOME -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="wrapper-page">
+
+                    <div class="account-pages">
+                        <div class="account-box">
+                            <div class="account-logo-box">
+                                <h2 class="text-uppercase text-center">
+                                    <a href="index.html" class="text-success">
+                                        <span><img src="~/Content/assets/images/logo_dark.png" alt="" height="18"></span>
+                                    </a>
+                                </h2>
+                                <h6 class="text-uppercase text-center font-bold mt-4">Sign In</h6>
+                            </div>
+                            <div class="account-content">
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    @Html.ValidationSummary(false)
+                                </div>
+
+                                @using (Html.BeginForm("Login", "Auth", new { returnUrl = Request.QueryString["returnUrl"] }))
+                                {
+                                    <div class="form-group m-b-20 row">
+                                        <div class="col-12">
+                                            <label for="emailaddress">Username</label>
+                                            <input class="form-control" type="text" id="username" required="" placeholder="Enter your username" name="Username">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row m-b-20">
+                                        <div class="col-12">
+                                            <a href="page-recoverpw.html" class="text-muted pull-right"><small>Forgot your password?</small></a>
+                                            <label for="password">Password</label>
+                                            <input class="form-control" type="password" required="" id="password" placeholder="Enter your password" name="Password">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group row m-b-20">
+                                        <div class="col-12">
+
+                                            <div class="checkbox checkbox-success">
+                                                <input id="remember" type="checkbox" checked="">
+                                                <label for="remember">
+                                                    Remember me
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row text-center m-t-10">
+                                        <div class="col-12">
+                                            <button class="btn btn-block btn-gradient waves-effect waves-light" type="submit">Sign In</button>
+                                        </div>
+                                    </div>
+
+                                }
+
+                                <div class="row m-t-50">
+                                    <div class="col-sm-12 text-center">
+                                        <p class="text-muted">Don't have an account? <a href="page-register.html" class="text-dark m-l-5"><b>Sign Up</b></a></p>
+                                        @*<script type="text/javascript">$('#btnFacebookLogin').click(function () {
+                                            window.location.href = "api/Account/ExternalLogin?provider=Facebook&response_type=token&client_id=self&redirect_uri="
+                                                                                        }</script>*@
+                                        <input class="btn btn-lg btn-facebook btn-block" type="submit" value="Login via facebook">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card-box-->
+
+
+                </div>
+                <!-- end wrapper -->
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END HOME -->
+<script src="~/Content/assets/js/jquery.min.js"></script>
+<script src="~/Content/assets/js/popper.min.js"></script>
+<script src="~/Content/assets/js/bootstrap.min.js"></script>
+<script src="~/Content/assets/js/waves.js"></script>
+<script src="~/Content/assets/js/jquery.slimscroll.js"></script>

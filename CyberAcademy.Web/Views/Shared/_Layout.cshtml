@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<link href="~/Content/assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="~/Content/assets/images/favicon.ico">
+
+        @RenderSection("styles", false)
+
+        <!-- App css -->
+        <link href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/assets/css/style.css" rel="stylesheet" type="text/css" />
+
+        <script src="~/Content/assets/js/modernizr.min.js"></script>
+
+    </head>
+    <body background="~/images/back.jpg">
+
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+
+        </div>
+        <!-- jQuery  -->
+        <script src="~/Content/assets/js/jquery.min.js"></script>
+        <script src="~/Content/assets/js/popper.min.js"></script>
+        <script src="~/Content/assets/js/bootstrap.min.js"></script>
+        <script src="~/Content/assets/js/waves.js"></script>
+        <script src="~/Content/assets/js/jquery.slimscroll.js"></script>
+
+        @RenderSection("scripts", false)
+
+        <!-- App js -->
+        <script src="~/Content/assets/js/jquery.core.js"></script>
+        <script src="~/Content/assets/js/jquery.app.js"></script>
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+    </body>
+
+</html>
